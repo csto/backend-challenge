@@ -51,3 +51,12 @@ headings
 friendships
   member_a
   member_b
+
+
+## Things to consider
+
+Bitly has API limits that need to be handled.
+If Bitly is down, a new member cannot be created.  Creating short links should be a background job.
+HeadingService errors need to be handled.
+HeadingService#process should be a background job.
+HeadingService#process should limit the number of headings it creates.

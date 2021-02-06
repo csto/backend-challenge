@@ -15,6 +15,7 @@ gem 'materialize-sass'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'pry-rails'
 gem 'kaminari'
+gem 'nokogiri'
 
 group :development do
   gem 'web-console', '>= 4.1.0'

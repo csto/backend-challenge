@@ -9,7 +9,7 @@ class MembersController < ApplicationController
     ShortLinkService.process(@member) if @member.valid?
 
     if @member.errors.blank? && @member.save
-      # HeadingsService.process(@member)
+      HeadingsService.process(@member)
       redirect_to @member
     else
       render :new
