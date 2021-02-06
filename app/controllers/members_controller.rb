@@ -6,8 +6,9 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(permitted_params)
 
-    if @member.save
-      # ShortLinkService.process(@member)
+    ShortLinkService.process(@member) if @member.valid?
+
+    if @member.errors.blank? && @member.save
       # HeadingsService.process(@member)
       redirect_to @member
     else

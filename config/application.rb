@@ -24,6 +24,11 @@ module BackendChallenge
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # Map development credentials to ENV variables
+    Rails.application.credentials.config.each do |key, value|
+      ENV[key.to_s] = value
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
