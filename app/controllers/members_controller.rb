@@ -9,7 +9,7 @@ class MembersController < ApplicationController
     ShortLinkService.process(@member) if @member.valid?
 
     if @member.errors.blank? && @member.save
-      HeadingsService.process(@member)
+      HeadingService.process(@member)
       redirect_to @member
     else
       render :new
@@ -18,6 +18,7 @@ class MembersController < ApplicationController
 
   def show
     @member = Member.find(params[:id])
+    @headings = @member.headings.page(params[:page]).per(5)
   end
 
   def index

@@ -3,6 +3,12 @@
 <div class='card'>
   <div class='card-content'>
     <p><%= @member.website_url %></p>
-    <p><%= @member.website_short_url %></p>
+    <p><%= link_to @member.website_short_url, @member.website_short_url if @member.website_short_url.present? %></p>
   </div>
 </div>
+
+<% @headings.each do |heading| %>
+  <div><%= heading.value %></div>
+<% end %>
+
+<%= paginate @headings %>

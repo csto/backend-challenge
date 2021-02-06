@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-class HeadingsService
+class HeadingService
   def self.process(member)
     file = URI.open(member.website_short_url)
     doc = Nokogiri::HTML(file)

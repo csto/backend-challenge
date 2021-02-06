@@ -60,3 +60,4 @@ If Bitly is down, a new member cannot be created.  Creating short links should b
 HeadingService errors need to be handled.
 HeadingService#process should be a background job.
 HeadingService#process should limit the number of headings it creates.
+Handle empty state for members, headings and friends lists
