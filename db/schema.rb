@@ -20,12 +20,8 @@ ActiveRecord::Schema.define(version: 2021_02_06_214319) do
     t.integer "member_b_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "member_a_id_id"
-    t.bigint "member_b_id_id"
     t.index ["member_a_id"], name: "index_friendships_on_member_a_id"
-    t.index ["member_a_id_id"], name: "index_friendships_on_member_a_id_id"
     t.index ["member_b_id"], name: "index_friendships_on_member_b_id"
-    t.index ["member_b_id_id"], name: "index_friendships_on_member_b_id_id"
   end
 
   create_table "headings", force: :cascade do |t|
@@ -47,7 +43,7 @@ ActiveRecord::Schema.define(version: 2021_02_06_214319) do
     t.index ["name"], name: "index_members_on_name"
   end
 
-  add_foreign_key "friendships", "members", column: "member_a_id_id"
-  add_foreign_key "friendships", "members", column: "member_b_id_id"
+  add_foreign_key "friendships", "members", column: "member_a_id"
+  add_foreign_key "friendships", "members", column: "member_b_id"
   add_foreign_key "headings", "members"
 end
