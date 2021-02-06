@@ -5,5 +5,14 @@
   <div class='input-field'>
     <%= f.label :name %>
     <%= f.text_field :name %>
+    <%= error_for @member, :name %>
   </div>
+
+  <div class='input-field'>
+    <%= f.label :website_url %>
+    <%= f.text_field :website_url %>
+    <%= error_for @member, :website_url %>
+  </div>
+
+  <%= f.submit 'Submit', class: 'btn btn-large' %>
 <% end %>

@@ -1,2 +1,8 @@
-<h1>Members#show</h1>
-<p>Find me in app/views/members/show.html.erb</p>
+<h1><%= @member.name %></h1>
+
+<div class='card'>
+  <div class='card-content'>
+    <p><%= @member.website_url %></p>
+    <p><%= @member.website_short_url %></p>
+  </div>
+</div>
