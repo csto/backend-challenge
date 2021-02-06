@@ -9,3 +9,7 @@ require('./materialize.js')
 
 Rails.start()
 Turbolinks.start()
+
+document.addEventListener('turbolinks:load', async () => {
+
+})
