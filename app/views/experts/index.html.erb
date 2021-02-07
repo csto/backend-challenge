@@ -12,7 +12,7 @@
     <%= link_to member.name, member %>
 
     <div class='right'>
-      <%= link_to 'View connections' %>
+      <%= link_to 'View connections', connections_member_experts_path(@member, expert_id: member.id) %>
     </div>
   </div>
 <% end %>

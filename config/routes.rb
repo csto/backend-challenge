@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :members, only: [:new, :create, :index, :show] do
     resources :friendships, only: [:new, :create, :index]
     resources :experts, only: [:index] do
-      collection :connections
+      collection do
+        get :connections
+      end
     end
   end
 

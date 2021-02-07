@@ -8,4 +8,10 @@ class ExpertsController < ApplicationController
       @members = []
     end
   end
+
+  def connections
+    @member = Member.find(params[:member_id])
+
+    @members = ShortestPathService.process(@member.id, params[:expert_id])
+  end
 end
