@@ -1,0 +1,8 @@
+<h1>Friends</h1>
+
+<% @member.friendships.each do |friendship| %>
+  <% friend = friendship.friend_of(@member.id) %>
+  <div>
+    <%= link_to friend.name, friend %>
+  </div>
+<% end %>

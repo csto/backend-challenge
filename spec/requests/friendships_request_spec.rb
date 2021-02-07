@@ -1,24 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe "Members", type: :request do
+RSpec.describe "Friendships", type: :request do
 
   # describe "GET /new" do
   #   it "returns http success" do
-  #     get "/members/new"
+  #     get "/friendships/new"
   #     expect(response).to have_http_status(:success)
   #   end
   # end
 
   # describe "GET /index" do
   #   it "returns http success" do
-  #     get "/members/index"
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-
-  # describe "GET /show" do
-  #   it "returns http success" do
-  #     get "/members/show"
+  #     get "/friendships/index"
   #     expect(response).to have_http_status(:success)
   #   end
   # end
