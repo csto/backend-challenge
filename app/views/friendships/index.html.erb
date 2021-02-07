@@ -1,4 +1,4 @@
-<h1>Friends</h1>
+<h1>Friends of <%= @member.name %></h1>
 
 <% @member.friendships.each do |friendship| %>
   <% friend = friendship.friend_of(@member.id) %>

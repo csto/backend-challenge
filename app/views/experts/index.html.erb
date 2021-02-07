@@ -1,0 +1,18 @@
+<h1>Experts for <%= @member.name %></h1>
+
+<%= form_tag member_experts_path(@member), method: :get do %>
+  <div class='input-field'>
+    <%= label_tag :search %>
+    <%= text_field_tag :search, params[:search] %>
+  </div>
+<% end %>
+
+<% @members.each do |member| %>
+  <div>
+    <%= link_to member.name, member %>
+
+    <div class='right'>
+      <%= link_to 'View connections' %>
+    </div>
+  </div>
+<% end %>
